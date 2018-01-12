@@ -1,0 +1,239 @@
+<div class="container-fluid border border-dark">
+  <div class="row mt-5 mr-1 ml-1 ">
+    <div class="col-sm-7 border border-dark">
+      <h4 class="pt-1" style="color:#800080">Search</h4>
+      <hr class="border-dark">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <div class="row">
+              <div class="col-5 text-center"><p class="pt-2" for="exampleInputEmail1">Batch Number</p></div>
+              <div class="col-7 pl-1"><input type="text" class="form-control" placeholder="Batch No"></div>
+          </div>
+          
+        </div>
+        
+      </div>
+      <div class="row mb-2">
+          <div class="col-sm-6">
+            
+            <div class="row">
+                <div class="col-5 text-center"><p class="pt-2" for="exampleInputEmail1">Source System</p></div>
+                <div class="col-7 pl-1"><select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Source System</option>
+                    <option value="1">FX</option>
+                    <option value="2">FDFR</option>
+                    <option value="3">EACI</option>
+                  </select></div>
+            </div>
+          </div>
+          
+        </div>
+      <div class="row pt-2">
+        
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-sm-4 text-center">
+              <p class="pt-1" for="exampleInputEmail1">From Date:</p>
+            </div>
+            <div class="col-sm-1 pr-0"></div>
+            <div class="col-sm-7 pr-0 pl-0">
+                <input  type="date" class="form-control" placeholder="From Date">
+            </div>
+            
+            
+          </div>
+
+
+        </div>
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-sm-2 pr-1 text-center">
+              <p class="pt-1" for="exampleInputEmail1">To:</p>
+              
+            </div>
+            <div class="col-sm-8 pl-0">
+                <input   type="date" class="form-control" placeholder="To Date">
+              <!-- <i class="fa fa-calendar fa-2x" aria-hidden="true"></i> -->
+            </div>
+            <div class="col-sm-2"></div>
+          </div>
+
+        </div>
+       
+      </div>
+      <div class="row pt-2">
+          <div class="col-sm-7">
+
+          </div>
+          <div class="col-sm-4 pl-0">
+              <!-- <div class="row pb-2"> -->
+                  <!-- <div class="col-sm-6"> -->
+                      <button type="button" class="btn btn-sm py-2">Search</button>
+                  <!-- </div> -->
+                  <!-- <div class="col-sm-6"> -->
+                      <button type="button" class="btn btn-sm py-2">Reset</button>
+                  <!-- </div> -->
+              <!-- </div> -->
+          </div>
+          <div class="col-sm-1">
+
+            </div>
+      </div>
+    </div>
+    <div class="col-sm-5 border border-dark">
+      <h4 class="pt-1" style="color :#800080">Summary</h4>
+      <hr class="border-dark">
+      <table class="table table-bordered table-striped " id="alter_table">
+        <thead id="thead">
+          <tr>
+            <th scope="col">Batch no <span class="fa fa-sort" id="batch"></span></th>
+            <th scope="col" id="total">Total records<span class="fa fa-sort pl-1" id="batch"></span></th>
+            <th scope="col" id="records">Unmatched records<span class="fa fa-sort pl-2" id="batch"></span></th>
+
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr>
+            <th scope="row">1001</th>
+            <td>10000</td>
+            <td>100</td>
+
+          </tr>
+          
+          <tr>
+            <th scope="row">1002</th>
+            <td>20000</td>
+            <td>200</td>
+
+          </tr>
+          <tr>
+            <th scope="row">1003</th>
+            <td>40000</td>
+            <td>300</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row  mt-2 mr-1 ml-1">
+      <div class="col-sm-1">
+      <div class="custom-control custom-radio pr-1 ">
+          <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+          <label class="custom-control-label" for="customRadio1">All</label>
+        </div>
+        </div>
+        <div class="col-sm-1">
+        <div class="custom-control custom-radio">
+          <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+          <label class="custom-control-label" for="customRadio2">Difference</label>
+        </div>
+        </div>
+        <div class="col-sm-10"></div>
+    </div>
+    
+    <div class="row pt-2">
+    <div class="col-sm-2">
+        <p class="text-center mb-0 key_list" id="keys"><label class="pr-3 pt-1" >Keys</label><span class="fa fa-sort pr-1 pull-right mt-2"></span></p>
+        <ul class="list-group-item for_scroll list-hover" id="list">
+            <a href=""><li class="list-group-item list-group-item-action active" >1001</li></a>
+            <a href=""><li class="list-group-item list-group-item-action text-danger">1002</li></a>
+            <a href=""><li class="list-group-item list-group-item-action">1003</li></a>
+            <a href=""><li class="list-group-item list-group-item-action">1004</li></a>
+            <a href=""><li class="list-group-item list-group-item-action text-danger">1005</li></a>
+            <li class="list-group-item list-group-item-action" >1006</li>
+            <li class="list-group-item list-group-item-action">1007</li>
+            <li class="list-group-item list-group-item-action text-danger">1008</li>
+            <li class="list-group-item list-group-item-action">1009</li>
+            <li class="list-group-item list-group-item-action">1010</li>
+            <li class="list-group-item list-group-item-action" >1011</li>
+            <li class="list-group-item list-group-item-action">1012</li>
+            <li class="list-group-item list-group-item-action text-danger">1013</li>
+            <li class="list-group-item list-group-item-action">1014</li>
+            <li class="list-group-item list-group-item-action">1015</li>
+            <li class="list-group-item list-group-item-action">1016</li>
+            <li class="list-group-item list-group-item-action">1017</li>
+            <li class="list-group-item list-group-item-action">1018</li>
+            <li class="list-group-item list-group-item-action">1019</li>
+            <li class="list-group-item list-group-item-action">1020</li>
+          </ul>
+    </div>
+
+    <div class="col-sm-10">
+        <table class="table table-bordered table-fixed">
+            <thead>
+              <tr>
+                <th scope="col">Field Name</th>
+                <th scope="col">Generated data</th>
+                <th scope="col">Target data</th>
+    
+              </tr>
+            </thead>
+            <tbody >
+              <tr>
+                <td  colspan="3" class="color_grey">
+                    <a class="" data-toggle="collapse" href="#PersonDetails" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa fa-plus-circle text-dark" aria-hidden="true"></i>
+                      </a>Person Details
+                </td>
+    
+              </tr>
+              
+              </tbody>
+              <tbody class="collapse" id="PersonDetails">
+              <tr >
+                <th scope="row">First Name</th>
+                <td>xxx</td>
+                <td>xxx</td>
+              </tr>
+              <tr >
+                  <th scope="row">Last Name</th>
+                  <td>yyy</td>
+                  <td>yyy</td>
+                </tr>
+                <tr >
+                    <th scope="row">Middle Name</th>
+                    <td>zzz</td>
+                    <td>zzz</td>
+                  </tr>
+              
+              
+            </tbody>
+            <tbody>
+                <tr>
+                    <td  colspan="3" class="color_grey">
+                        <a class="" data-toggle="collapse" href="#AddressDetails" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <i class="fa fa-plus-circle text-dark" aria-hidden="true"></i>
+                          </a>Address Details
+                    </td>
+        
+                  </tr>
+            </tbody>
+            <tbody class="collapse" id="AddressDetails">
+                <tr >
+                  <th scope="row">Line</th>
+                  <td>111 Remo Street</td>
+                  <td>111 Remo Street</td>
+                </tr>
+                <tr >
+                    <th scope="row">City</th>
+                    <td>NewYork</td>
+                    <td>California</td>
+                  </tr>
+                  <tr >
+                      <th scope="row">State</th>
+                      <td>USA</td>
+                      <td>USA</td>
+                    </tr>
+                
+                
+              </tbody>
+            
+          </table>
+
+    </div>
+
+
+</div>
+</div>
+  
